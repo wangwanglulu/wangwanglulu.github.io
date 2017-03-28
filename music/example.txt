@@ -1,0 +1,1 @@
+{% aplayer "Merry Go Round of Life" "Joe Hisaishi" "/music/Merry Go Round of Life.mp3" "/music/joe.jpg" %}
