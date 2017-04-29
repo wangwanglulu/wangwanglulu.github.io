@@ -810,6 +810,37 @@ pre .javascript .function {
 .info h6 {
   color: #5bc0de;
 }
+.note {
+  padding: 20px;
+  border: initial;
+  border-radius: initial;
+  border-left: 3px solid #eee;
+  background-color: #fafafa;
+}
+.default {
+  border-color: #777;
+  background-color: #f7f7f7;
+}
+.primary {
+  border-color: #428bca;
+  background-color: #e6f3fe;
+}
+.success {
+  border-color: #5cb85c;
+  background-color: #effaf0;
+}
+.danger {
+  border-color: #d9534f;
+  background-color: #feecea;
+}
+.warning {
+  border-color: #f0ad4e;
+  background-color: #fdf1d8;
+}
+.info {
+  border-color: #5bc0de;
+  background-color: #ebf9ff;
+}
 .btn {
   display: inline-block;
   padding: 0 20px;
@@ -1689,7 +1720,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b93971;
+  background: #66ed5d;
 }
 .links-of-blogroll {
   font-size: 13px;
