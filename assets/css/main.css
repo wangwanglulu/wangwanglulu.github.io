@@ -318,6 +318,7 @@ ol,
 dl,
 table {
     margin-bottom: 0em;
+    text-align: left;
 }
 
 header {
