@@ -1,33 +1,1108 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>在Github Pages部署Html5幻灯片 | Lu Wang</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">在Github Pages部署Html5幻灯片</h1><a id="logo" href="/.">Lu Wang</a><p class="description">Resource Station &amp; Insomnia Heaven</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/about/"><i class="fa fa-user"> 简介</i></a><a href="/teaching/"><i class="fa fa-pencil"> 教学</i></a><a href="/archives/"><i class="fa fa-archive"> 目录</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">在Github Pages部署Html5幻灯片</h1><div class="post-meta">Sep 20, 2017<span> | </span><span class="category"><a href="/categories/软件使用/">软件使用</a></span></div><a class="disqus-comment-count" href="/2017/09/20/reveal/#vcomment"><span class="valine-comment-count" data-xid="/2017/09/20/reveal/"></span><span> 条评论</span></a><div class="post-content"><p><img src="/images/b112.jpg"></p>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="软件使用," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="上课需要一种幻灯片，可以方便的展示代码，可以编辑数学公式，可以用markdown编辑，可以在网页上方便的浏览，也可以线下浏览。这里介绍一个“黑科技”，将幻灯片部署在我的个人主页上。">
+<meta name="keywords" content="软件使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在Github Pages部署Html5幻灯片">
+<meta property="og:url" content="http://dearlu.wang/2017/09/20/reveal/index.html">
+<meta property="og:site_name" content="Lu&#39;s Reality Marble">
+<meta property="og:description" content="上课需要一种幻灯片，可以方便的展示代码，可以编辑数学公式，可以用markdown编辑，可以在网页上方便的浏览，也可以线下浏览。这里介绍一个“黑科技”，将幻灯片部署在我的个人主页上。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://dearlu.wang/images/b112.jpg">
+<meta property="og:updated_time" content="2021-12-14T06:06:10.088Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在Github Pages部署Html5幻灯片">
+<meta name="twitter:description" content="上课需要一种幻灯片，可以方便的展示代码，可以编辑数学公式，可以用markdown编辑，可以在网页上方便的浏览，也可以线下浏览。这里介绍一个“黑科技”，将幻灯片部署在我的个人主页上。">
+<meta name="twitter:image" content="http://dearlu.wang/images/b112.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dearlu.wang/2017/09/20/reveal/"/>
+
+
+
+
+
+
+  <title>在Github Pages部署Html5幻灯片 | Lu's Reality Marble</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lu's Reality Marble</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/2017/04/25/bio" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://dearlu.wang/2017/09/20/reveal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lu Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lu's Reality Marble">
+    </span>
+
+    
+    <img class="featureimg" src="/images/b112.jpg">
+    
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                在Github Pages部署Html5幻灯片
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T23:56:27+08:00">
+                2017-09-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学术技术/" itemprop="url" rel="index">
+                    <span itemprop="name">学术技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/09/20/reveal/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/09/20/reveal/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/09/20/reveal/" class="leancloud_visitors" data-flag-title="在Github Pages部署Html5幻灯片">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/b112.jpg" class="img-1f"></p>
 <p>上课需要一种幻灯片，可以方便的展示代码，可以编辑数学公式，可以用markdown编辑，可以在网页上方便的浏览，也可以线下浏览。这里介绍一个“黑科技”，将幻灯片部署在我的个人主页上。</p>
 <a id="more"></a>
-<h3 id="Reveal-js"><a href="#Reveal-js" class="headerlink" title="Reveal.js"></a>Reveal.js</h3><p>Reveal.js绝对是幻灯片界的黑科技，可以看看它的<a href="http://lab.hakim.se/reveal-js/#/" target="_blank" rel="noopener">Demo</a>，还有它的<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="noopener">介绍文档</a>，感觉实在有点炫酷。</p>
+<div class="note primary"><h3 id="Reveal-js"><a href="#Reveal-js" class="headerlink" title="Reveal.js"></a>Reveal.js</h3></div>
+<p>Reveal.js绝对是幻灯片界的黑科技，可以看看它的<a href="http://lab.hakim.se/reveal-js/#/" target="_blank" rel="noopener">Demo</a>，还有它的<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="noopener">介绍文档</a>，感觉实在有点炫酷。</p>
 <p>这里仅介绍怎么将幻灯片部署到我的个人主页上，具体怎么做幻灯片，参考一下介绍文档就可以了。</p>
-<h3 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h3><h4 id="1-创建一个新的respository"><a href="#1-创建一个新的respository" class="headerlink" title="1. 创建一个新的respository"></a>1. 创建一个新的respository</h4><p>比如取名为test，然后在本地比如说D盘打开git bash，clone这个respository到本地，输入<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/user/test.git</span><br></pre></td></tr></table></figure><br>user就是你用户名咯。</p>
-<h4 id="2-创建gh-pages-branch"><a href="#2-创建gh-pages-branch" class="headerlink" title="2. 创建gh-pages branch"></a>2. 创建gh-pages branch</h4><p>在你刚才创建的文件夹D:/test打开git bash，输入<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="comment">--orphan gh-pages</span></span><br></pre></td></tr></table></figure><br>这样你的gh-pages分支就创建好了。</p>
-<h4 id="3-上传reveal-js到branch"><a href="#3-上传reveal-js到branch" class="headerlink" title="3. 上传reveal.js到branch"></a>3. 上传reveal.js到branch</h4><p>从<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="noopener">reveal.js</a>把文件下载下来，编辑index.html文件（这个就是你的幻灯片），然后全部拷贝到刚才的test文件夹，输入<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br><span class="line"><span class="bash">git commit -m <span class="string">"1st commit"</span></span></span><br><span class="line"><span class="bash">git push origin gh-pages</span></span><br></pre></td></tr></table></figure><br>输入你账户的用户名和密码就搞定了！接下来试着访问一下 user.github.io/test，就可以访问幻灯片了。也可以下载下来，直接查看index.html，或者生成PDF文件。</p>
+<div class="note primary"><h3 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h3></div>
+<h4 id="1-创建一个新的respository"><a href="#1-创建一个新的respository" class="headerlink" title="1. 创建一个新的respository"></a>1. 创建一个新的respository</h4><p>比如取名为test，然后在本地比如说D盘打开git bash，clone这个respository到本地，输入</p>
+<pre><code>git clone https://github.com/user/test.git
+</code></pre><p>user就是你用户名咯。</p>
+<h4 id="2-创建gh-pages-branch"><a href="#2-创建gh-pages-branch" class="headerlink" title="2. 创建gh-pages branch"></a>2. 创建gh-pages branch</h4><p>在你刚才创建的文件夹D:/test打开git bash，输入</p>
+<pre><code>git checkout --orphan gh-pages
+</code></pre><p>这样你的gh-pages分支就创建好了。</p>
+<h4 id="3-上传reveal-js到branch"><a href="#3-上传reveal-js到branch" class="headerlink" title="3. 上传reveal.js到branch"></a>3. 上传reveal.js到branch</h4><p>从<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="noopener">reveal.js</a>把文件下载下来，编辑index.html文件（这个就是你的幻灯片），然后全部拷贝到刚才的test文件夹，输入</p>
+<pre><code>git add .
+git commit -m &quot;1st commit&quot;
+git push origin gh-pages
+</code></pre><p>输入你账户的用户名和密码就搞定了！接下来试着访问一下 user.github.io/test，就可以访问幻灯片了。也可以下载下来，直接查看index.html，或者生成PDF文件。</p>
 <p>至于具体怎么修改幻灯片，可以好好研究一下。</p>
-</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a class="article-share-link" data-url="http://wangwanglulu.com/2017/09/20/reveal/" data-id="ckm93vyd60005oit05p2t72p8" data-qrcode="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABw0lEQVR42u3aQW7DMAwEwPz/0y3QUw+1vRRlQgXGpyBBrJEOC5HS5xM/Xz/P78/Jk79z84OLi9vmJkPevzpH378/mjYuLu4gNw+vaiRdTTtZDlxc3PO5Cb26S8HFxf3v3HxrkuBwcXHP5ybFTz5kEnav12q4uLgN7lrDdO/n1/u7uLi4m04lkkDphE55dFxc3BHuVaAkuH7bdK0cwsXFPYGbX6ToX8iIwhEXF/dlbueCRbW1kTRbH5YPFxd3kFstbwoDFAukh5YrLi7uCLfa4Fgre9Zi8QGNi4v7MrdzMSKPs7VD1sX+Ci4uboObB9P9patkGhtCEBcX9wDuPXFXy6MQkbi4uCPcam5U2yjJ9iWPQlxc3Blu5wC1GnxrlzBwcXHnueWuarzFqbY/koXAxcWd4eYFTDWS8sKm8GZcXNxBbvK3PIbyoqh6HIuLizvJrSI6G6C1C1vl1cLFxW1wq4GSN0DzCxzJ1Y3yZHBxcdvcPHT6g+UHsZcxh4uLO8jtNzqrzdMN2xdcXNwDuNU2R38Cf/yKi4t7JHdtS7StcMLFxR3k9g9ck6OXtQhbrNVwcXEb3H7DNP/+fpNUjUVcXNwXuN+EME3UVpckwwAAAABJRU5ErkJggg==">分享</a><div class="tags"></div><div class="post-nav"><a class="pre" href="/2019/03/22/nbviewer/">nbviewer分享Jupyter Notebook</a><a class="next" href="/2017/09/20/gtd/">简约GTD管理备忘</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
-var verify = 'false' == true ? true : false;
-var GUEST_INFO = ['nick','mail','link'];
-var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-  return GUEST_INFO.indexOf(item) > -1
-});
-guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
-window.valine = new Valine({
-  el:'#vcomment',
-  notify:notify,
-  verify:verify,
-  appId:'udUXcAFbvuSJHqIs7cSIGtTE-gzGzoHsz',
-  appKey:'JOsR5yzszcih31cIRNNA9yWs',
-  placeholder:'请随意留言',
-  avatar:'mm',
-  guest_info:guest_info,
-  pageSize:'10'
-})</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/软件使用/">软件使用</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/03/22/nbviewer/">nbviewer分享Jupyter Notebook</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/20/reveal/">在Github Pages部署Html5幻灯片</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/09/20/gtd/">简约GTD管理备忘</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://wangwanglulu.com/" title="Lu's Notebook" target="_blank">Lu's Notebook</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2021 <a href="/." rel="nofollow">Lu Wang.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/search.js?v=0.0.0"></script><script>var search_path = 'search.xml';
-if (search_path.length == 0) {
-   search_path = 'search.xml';
-}
-var path = '/' + search_path;
-searchFunc(path, 'local-search-input', 'local-search-result');
-</script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
+<div class="note danger"><p><strong>本文作者</strong>： Lu Wang<br><strong>版权声明</strong>： 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</p>
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/软件使用/" rel="tag"><i class="fa fa-tag"></i> 软件使用</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/02/gtd/" rel="next" title="简约GTD管理备忘">
+                <i class="fa fa-chevron-left"></i> 简约GTD管理备忘
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/22/nbviewer/" rel="prev" title="nbviewer分享Jupyter Notebook">
+                nbviewer分享Jupyter Notebook <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="vcomments"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Lu Wang" />
+          <p class="site-author-name" itemprop="name">Lu Wang</p>
+           
+              <p class="site-description motion-element" itemprop="description">This is Lu Wang Zone's inner world projected on the reality. Update monthly.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wangwang-lulu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wangwanglulu.com" title="Notebook" target="_blank">Notebook</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://luluwangwang.com" title="Notebook (Alternative)" target="_blank">Notebook (Alternative)</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wangwanglulu.cn" title="Insomnia Heaven" target="_blank">Insomnia Heaven</a>
+                </li>
+              
+            </ul>
+
+          </div>
+         
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reveal-js"><span class="nav-number">1.</span> <span class="nav-text">Reveal.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置方法"><span class="nav-number">2.</span> <span class="nav-text">设置方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-创建一个新的respository"><span class="nav-number">2.1.</span> <span class="nav-text">1. 创建一个新的respository</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-创建gh-pages-branch"><span class="nav-number">2.2.</span> <span class="nav-text">2. 创建gh-pages branch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-上传reveal-js到branch"><span class="nav-number">2.3.</span> <span class="nav-text">3. 上传reveal.js到branch</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+          
+
+    </div>
+  </aside>
+
+  <div class="content-wrap">
+  <ul class="navigation">
+            <a class="main" >GO!</a>
+            <li class="n1"><a href="/categories/学术技术/">学术技术</a></li>
+            <li class="n2"><a href="/categories/旅行回忆/">旅行回忆</a></li>
+            <li class="n3"><a href="/categories/游赏系列/">游赏系列</a></li>
+            <li class="n4"><a href="/categories/生活随笔/">生活随笔</a></li>
+         </ul>
+         </div>
+
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lu Wang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'c9RNKsD00tfxokI0L0LKW5uQ-gzGzoHsz',
+    appKey: '6TqB0Quo8JBjhkbVf67fNF9a',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("c9RNKsD00tfxokI0L0LKW5uQ-gzGzoHsz", "6TqB0Quo8JBjhkbVf67fNF9a");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+</body>
+</html>

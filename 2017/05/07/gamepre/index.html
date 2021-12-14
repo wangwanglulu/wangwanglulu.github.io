@@ -1,0 +1,1116 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="小众游戏,游戏机制," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="我决定写一个专题，探讨一下游戏中的机制。这里主要选取了稍微nerd一点的游戏——卡牌类游戏。不同于电脑或者主机游戏，卡牌游戏没有生动的画面和绚丽的音效，只能依靠游戏机制本身去吸引玩家，拥有纯粹的游戏感，也较为容易解读游戏设计者的思想。">
+<meta name="keywords" content="小众游戏,游戏机制">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游赏：前言">
+<meta property="og:url" content="http://dearlu.wang/2017/05/07/gamepre/index.html">
+<meta property="og:site_name" content="Lu&#39;s Reality Marble">
+<meta property="og:description" content="我决定写一个专题，探讨一下游戏中的机制。这里主要选取了稍微nerd一点的游戏——卡牌类游戏。不同于电脑或者主机游戏，卡牌游戏没有生动的画面和绚丽的音效，只能依靠游戏机制本身去吸引玩家，拥有纯粹的游戏感，也较为容易解读游戏设计者的思想。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://dearlu.wang/images/b18.jpg">
+<meta property="og:updated_time" content="2021-12-14T06:06:10.087Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="游赏：前言">
+<meta name="twitter:description" content="我决定写一个专题，探讨一下游戏中的机制。这里主要选取了稍微nerd一点的游戏——卡牌类游戏。不同于电脑或者主机游戏，卡牌游戏没有生动的画面和绚丽的音效，只能依靠游戏机制本身去吸引玩家，拥有纯粹的游戏感，也较为容易解读游戏设计者的思想。">
+<meta name="twitter:image" content="http://dearlu.wang/images/b18.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dearlu.wang/2017/05/07/gamepre/"/>
+
+
+
+
+
+
+  <title>游赏：前言 | Lu's Reality Marble</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lu's Reality Marble</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/2017/04/25/bio" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://dearlu.wang/2017/05/07/gamepre/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lu Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lu's Reality Marble">
+    </span>
+
+    
+    <img class="featureimg" src="/images/b18.jpg">
+    
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                游赏：前言
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-07T13:13:37+08:00">
+                2017-05-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/游赏系列/" itemprop="url" rel="index">
+                    <span itemprop="name">游赏系列</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/05/07/gamepre/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/05/07/gamepre/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/05/07/gamepre/" class="leancloud_visitors" data-flag-title="游赏：前言">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/b18.jpg" class="img-1f"></p>
+<p>我决定写一个专题，探讨一下游戏中的机制。这里主要选取了稍微nerd一点的游戏——卡牌类游戏。不同于电脑或者主机游戏，卡牌游戏没有生动的画面和绚丽的音效，只能依靠游戏机制本身去吸引玩家，拥有纯粹的游戏感，也较为容易解读游戏设计者的思想。</p>
+<a id="more"></a>
+<div class="note primary"><h3 id="游戏选择"><a href="#游戏选择" class="headerlink" title="游戏选择"></a>游戏选择</h3></div>
+<p>经过一番蜜汁思考，我决定从几个公认有影响力的奖项的提名获奖名单里，参考我要评论的游戏。我一点也不想去点评烂游戏，博人眼球。以下是几个著名的奖项：</p>
+<h4 id="Golden-Geek-Awards"><a href="#Golden-Geek-Awards" class="headerlink" title="Golden Geek Awards"></a>Golden Geek Awards</h4><p>Golden Geek Awards是桌游论坛<a href="https://www.boardgamegeek.com/" target="_blank" rel="noopener">BoardGameGeek</a>设立的年度奖项，由该论坛的注册用户评选而出。BoardGameGeek论坛在2000年建立，是一个桌游爱好者的专业平台，并且举办年会。2010年，该论坛获得荣誉称号 “a resource without peer for board and card gamers, the recognized authority of this online community.”</p>
+<h4 id="Spiel-des-Jahres-SDJ"><a href="#Spiel-des-Jahres-SDJ" class="headerlink" title="Spiel des Jahres (SDJ)"></a>Spiel des Jahres (SDJ)</h4><p>SDJ，<a href="http://www.spiel-des-jahres.com/" target="_blank" rel="noopener">SDJ官方网站</a>，又称德国年度游戏大奖，是世界上最有影响力的桌游奖项。该奖项在1978年创办，由德国年度游戏奖评委会颁发，评委会由资深记者和相关从业人员组成。SDJ主要是奖励一些老少咸宜的游戏，不包括一些比较复杂或者竞技性很强的游戏。可惜的是，该奖仅颁发给德国本土的游戏。</p>
+<h4 id="Deutscher-Spiele-Preis-DSP"><a href="#Deutscher-Spiele-Preis-DSP" class="headerlink" title="Deutscher Spiele Preis (DSP)"></a>Deutscher Spiele Preis (DSP)</h4><p>DSP是由德国杂志Die Pöppel-Revue于1990年创立。投票来自于商店，杂志，专业人士和桌游社团。这个奖项弥补了SDJ只奖励休闲游戏的局限，DSP同时奖励专门为玩家设计，很有特点和创意的游戏。</p>
+<p>当然还有一些别的奖项，如International Gamers Awards (IGA)， Mensa Select，以及Games杂志编辑选出的游戏，但是一般好游戏都会获得多个奖项，所以没有必要把范围弄的太广。</p>
+<div class="note primary"><h3 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h3></div>
+<h4 id="Why-start？"><a href="#Why-start？" class="headerlink" title="Why start？"></a>Why start？</h4><p>我为什么要开始这个专题？答案很简单，就是好玩。其实写一个评论对我的职业和生存是没有任何影响的，这只是一个单纯的博客，没必要太认真。我认为游戏反应了人最纯真的思考，虽然里面有一些商业上的考量，但是相比影视音乐，是无与伦比的人类智慧结晶。我们设定了规则，规则兼顾公平和竞争，同时包含趣味。</p>
+<h4 id="规则物语"><a href="#规则物语" class="headerlink" title="规则物语"></a>规则物语</h4><p>规则是人类能够发明的最体现思考本质的东西。第一类规则是本质的。人类千百年来做研究就是解读自然界的规则，虽然至今我们也没有把自然界的规则摸透，但是丝毫不能阻止人的好奇心。人为解读的规则，就是我认为的第二类规则，我们有很多很多理论，解读自然界，解读社会，我们在这些规则下解释不能理解的东西，运用规则生产和生存。第三类规则就是人为创造的，比如说宪法，这些规则有的是生活中慢慢形成的，有的是理想化的东西。</p>
+<p>然而，我认为，前三类规则都无法脱离现实本身，必须在真实的环境下运作。而影视游戏中规则是虚构的，是纯思维性质的。虚构的作品中有很多对现实规则的颠覆。颠覆了之后怎么办？让我们看看在新的规则下，会出现什么情况，我们要动动脑子去思考，趣味就产生了。我称之为，“第四类规则”。</p>
+<p>在我看来，所有的虚构类作品，脱离了外在的形式之后，都有设定规则的成分，就好像金庸的小说，规则就是外功和内功相辅相成。而富奸能被称为创作鬼才，就是他对规则的理解要高人一筹（可参考最新的Hunter×Hunter的351-356话，反正这几话把我搅晕了）。游戏中的规则，比影视动漫又更深入，它让人参与其中，在我看来，是在“亲身实践”人为虚构的规则。</p>
+<p>游戏的规则有没有缺陷呢？有很多的。最让人无法忍受的一个缺陷，就是一个游戏会出现“dominant strategy”。就是说，你玩一个游戏玩了很长时间，就会逐渐找到一些必胜的策略，比如说五子棋如果没有“三三”，“四四”禁手，几乎就是先手必胜，你先落子你就必胜。早期的三国志游戏，包括很多游戏，赚钱就是“dominant strategy”。你先发展好经济，有了足够多的钱，就可以战胜对手。</p>
+<p>怎么解决这个“dominant strategy”的缺陷呢？我认为有以下几种方式。这里就是最能体现游戏设计者的智慧的地方了。</p>
+<h5 id="随机性"><a href="#随机性" class="headerlink" title="随机性"></a>随机性</h5><p>加入随机性是最直接的解决方法，比如说石头剪子布就是纯纯的随机游戏，毫无策略可言，至少你没有一个可以应对所有人的策略。三国志游戏，也会突然给你来个天灾，或者哪个武将挂了。加入随机性可以一定程度上避免先手的优势。然而问题来了，所谓随机性，就是说要在几个状态中以一定的概率转换，否则不称其为随机。换句话说，我们需要有几个状态来给我们搞随机，如果只有一个状态，还随个鬼。如果你要面对的是无穷的状态，自然找不到最优的策略。</p>
+<p>那么怎么设定状态呢？有两种方法，第一种是机器设定。拿人打个比方，如果人的身高体重是纯随机产生的，在出生的那一刻，上帝给你随机赋予了属性。所以状态的数量=可选的身高数×可选的体重数。游戏也会在初始时或者游戏中加入上帝视角的随机变量。第二种是对手设定，如果是人和人的对抗，那么至少对手怎么想的，是随机的，他很有可能出一些阴招怪招，你想不到的。所以就需要游戏的设计者给予玩家足够多的选项，允许一些超越常规但又不影响公平性的招数。</p>
+<h5 id="约束指标"><a href="#约束指标" class="headerlink" title="约束指标"></a>约束指标</h5><p>然而有时候，随机性还不够，我们要加入约束指标，比如说时间限制，比如说围棋中的先手贴六目半（天朝七目半）才能获胜，比如一个人的钱不能太多，多了就要“交税”。这样限制了一个策略的绝对优势，就给予了思考的空间。</p>
+<h5 id="目标转换"><a href="#目标转换" class="headerlink" title="目标转换"></a>目标转换</h5><p>最后一个是目标转换，比如三国志游戏中，虽然赚钱也许是最优策略，但是游戏获胜的目标并不是成为大富翁啊，游戏需要你占领所有城市。你需要把钱转换成战斗力去攻城略地。让最优策略和目标不一样，可以避免一根筋走到黑的情况。</p>
+<p>以上是我对一个游戏的规则设定的理解，当然了，很多游戏玩多了之后，还是会出现最优策略，但是丝毫不影响其游戏性，那就是有别的东西有趣了。所有规则都有缺陷，缺陷是难免的，好游戏的缺陷自然是少的，至少是很难让人发现的。这里只是按照我自己的理解，讨论了一下最恶心的缺陷，别的缺陷，过得去就行了。</p>
+<h4 id="评论啥？讨论啥？"><a href="#评论啥？讨论啥？" class="headerlink" title="评论啥？讨论啥？"></a>评论啥？讨论啥？</h4><p>回到主题，我们评论个啥？我不深入讨论游戏的材料是不是精良，背景故事是不是完善，我就想看看游戏的机制是什么，游戏设计者怎么想的。</p>
+<h4 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h4><p>我并不是什么游戏高手，也不是专业评论家，我要写的都是最直接的感受。而且遗憾的是，我没那么多时间也找不到人去玩这些游戏。但是我觉得游戏的机制设定是有意思的，它让我感到一丝丝的不安，这种不安源自一种对抽象事物的不理解，并随时随地让我思考现实中的理论。</p>
+<p>谁也不知道这种不安会将自己引向何方，但是这正是乐趣所在，不是吗？</p>
+<div class="note danger"><p><strong>本文作者</strong>： Lu Wang<br><strong>版权声明</strong>： 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</p>
+</div>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/小众游戏/" rel="tag"><i class="fa fa-tag"></i> 小众游戏</a>
+          
+            <a href="/tags/游戏机制/" rel="tag"><i class="fa fa-tag"></i> 游戏机制</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/27/photo/" rel="next" title="Hexo：图片展示">
+                <i class="fa fa-chevron-left"></i> Hexo：图片展示
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/10/school/" rel="prev" title="随笔：流派">
+                随笔：流派 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="vcomments"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Lu Wang" />
+          <p class="site-author-name" itemprop="name">Lu Wang</p>
+           
+              <p class="site-description motion-element" itemprop="description">This is Lu Wang Zone's inner world projected on the reality. Update monthly.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wangwang-lulu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wangwanglulu.com" title="Notebook" target="_blank">Notebook</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://luluwangwang.com" title="Notebook (Alternative)" target="_blank">Notebook (Alternative)</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wangwanglulu.cn" title="Insomnia Heaven" target="_blank">Insomnia Heaven</a>
+                </li>
+              
+            </ul>
+
+          </div>
+         
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏选择"><span class="nav-number">1.</span> <span class="nav-text">游戏选择</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Golden-Geek-Awards"><span class="nav-number">1.1.</span> <span class="nav-text">Golden Geek Awards</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Spiel-des-Jahres-SDJ"><span class="nav-number">1.2.</span> <span class="nav-text">Spiel des Jahres (SDJ)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deutscher-Spiele-Preis-DSP"><span class="nav-number">1.3.</span> <span class="nav-text">Deutscher Spiele Preis (DSP)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初衷"><span class="nav-number">2.</span> <span class="nav-text">初衷</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Why-start？"><span class="nav-number">2.1.</span> <span class="nav-text">Why start？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#规则物语"><span class="nav-number">2.2.</span> <span class="nav-text">规则物语</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#随机性"><span class="nav-number">2.2.1.</span> <span class="nav-text">随机性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#约束指标"><span class="nav-number">2.2.2.</span> <span class="nav-text">约束指标</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#目标转换"><span class="nav-number">2.2.3.</span> <span class="nav-text">目标转换</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#评论啥？讨论啥？"><span class="nav-number">2.3.</span> <span class="nav-text">评论啥？讨论啥？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局限性"><span class="nav-number">2.4.</span> <span class="nav-text">局限性</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+          
+
+    </div>
+  </aside>
+
+  <div class="content-wrap">
+  <ul class="navigation">
+            <a class="main" >GO!</a>
+            <li class="n1"><a href="/categories/学术技术/">学术技术</a></li>
+            <li class="n2"><a href="/categories/旅行回忆/">旅行回忆</a></li>
+            <li class="n3"><a href="/categories/游赏系列/">游赏系列</a></li>
+            <li class="n4"><a href="/categories/生活随笔/">生活随笔</a></li>
+         </ul>
+         </div>
+
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lu Wang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'c9RNKsD00tfxokI0L0LKW5uQ-gzGzoHsz',
+    appKey: '6TqB0Quo8JBjhkbVf67fNF9a',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("c9RNKsD00tfxokI0L0LKW5uQ-gzGzoHsz", "6TqB0Quo8JBjhkbVf67fNF9a");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+</body>
+</html>

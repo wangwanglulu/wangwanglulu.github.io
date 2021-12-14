@@ -1,0 +1,1191 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="软件使用,Hexo优化," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Hexo所提供的图片展示方法始终是有限的，但是要做一个简单而优雅的网站，太多的图片展示方式，反而会显得凌乱不堪。这里记录一下图片展示的各种方法，可以为日后的图文博客做模板。">
+<meta name="keywords" content="软件使用,Hexo优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo：图片展示">
+<meta property="og:url" content="http://dearlu.wang/2017/04/27/photo/index.html">
+<meta property="og:site_name" content="Lu&#39;s Reality Marble">
+<meta property="og:description" content="Hexo所提供的图片展示方法始终是有限的，但是要做一个简单而优雅的网站，太多的图片展示方式，反而会显得凌乱不堪。这里记录一下图片展示的各种方法，可以为日后的图文博客做模板。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://dearlu.wang/images/wb4.jpg">
+<meta property="og:image" content="http://dearlu.wang/images/wb4.jpg">
+<meta property="og:image" content="http://dearlu.wang/images/wb4.jpg">
+<meta property="og:image" content="http://dearlu.wang/images/wb4.jpg">
+<meta property="og:image" content="http://dearlu.wang/images/wb4.jpg">
+<meta property="og:updated_time" content="2021-12-14T06:06:10.088Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo：图片展示">
+<meta name="twitter:description" content="Hexo所提供的图片展示方法始终是有限的，但是要做一个简单而优雅的网站，太多的图片展示方式，反而会显得凌乱不堪。这里记录一下图片展示的各种方法，可以为日后的图文博客做模板。">
+<meta name="twitter:image" content="http://dearlu.wang/images/wb4.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://dearlu.wang/2017/04/27/photo/"/>
+
+
+
+
+
+
+  <title>Hexo：图片展示 | Lu's Reality Marble</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lu's Reality Marble</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/2017/04/25/bio" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://dearlu.wang/2017/04/27/photo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lu Wang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lu's Reality Marble">
+    </span>
+
+    
+    <img class="featureimg" src="/images/wb4.jpg">
+    
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo：图片展示
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-27T23:56:27+08:00">
+                2017-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学术技术/" itemprop="url" rel="index">
+                    <span itemprop="name">学术技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/04/27/photo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/27/photo/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/04/27/photo/" class="leancloud_visitors" data-flag-title="Hexo：图片展示">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/images/wb4.jpg" class="full-image"><br>Hexo所提供的图片展示方法始终是有限的，但是要做一个简单而优雅的网站，太多的图片展示方式，反而会显得凌乱不堪。这里记录一下图片展示的各种方法，可以为日后的图文博客做模板。<br><a id="more"></a><br><div class="note primary"><h2 id="首页展示"><a href="#首页展示" class="headerlink" title="首页展示"></a>首页展示</h2></div></p>
+<h3 id="单个图片"><a href="#单个图片" class="headerlink" title="单个图片"></a>单个图片</h3><p>这里仅介绍几种不改变主题太多的图片展示方式，更加深入的定义图片格式，修改css，请参考<a href="http://wuchong.me/blog/2014/12/13/hexo-theme-creating-image-styles/" target="_blank" rel="noopener">为 Hexo 主题添加多种图片样式</a>。最简单的展示方式，就是直接在markdown的标题栏里添加链接，我们用b12.jpg这个图片做个例子。</p>
+<pre><code>&lt;img src=&quot;/images/b12.jpg&quot; /&gt;
+</code></pre><p>如果是需要图片突破容器宽度，参照next文档，可以添加</p>
+<pre><code>&lt;img src=&quot;/images/b12.jpg&quot; class=&quot;full-image&quot; /&gt;
+</code></pre><p>当然同样也可以使用标签方式，</p>
+<pre><code>{% fullimage /images/b12.jpg, alt, title %}
+{% fi /images/b12.jpg, alt, title %}
+</code></pre><p>如果你有用hexo的数据存储格式的话，就是在文章的根目录建立与markdown文件同名的文件夹，并且把图片放在里面的话，那么可以用</p>
+<pre><code>{% asset_img g2.jpg This is an example image %}
+</code></pre><p>这里<code>This is an example image</code>是图片的说明。</p>
+<h3 id="多张图片"><a href="#多张图片" class="headerlink" title="多张图片"></a>多张图片</h3><p>如果想在首页添加多个图片，就必须在标题栏里添加</p>
+<pre><code>photos:
+- /images/b7.jpg
+- /images/b6.jpg
+- /images/b5.jpg
+</code></pre><p>这里有三张图，所以这三张图并排在一行。如果是两张图就是，两张图并排在一行，并且把容器填满。据我自己测试，如果是四张图的话，第四张图就会被挤到第二排，然而第二排并没有被占满，后面留下丑陋的空白。如果是六张图的话，第一排三张图，第二排三张图，全部被占满，所以请思考一下用这种方式，放几张图比较好看。</p>
+<p>这里要注意了，以上的几种图片放置方式，都是支持fancybox的。下面要说的就是next主题内置的一个图片放置方式，不支持fancybox，但是首页显示会比较好看， </p>
+<pre><code>{% gp 4-2 %}
+第一张图片的地址
+第二张图片的地址
+第三张图片的地址
+第四张图片的地址
+{% endgp %}
+</code></pre><p>采用这种方式后，图片就会按照一定的方式把容器占满，当然对应不同的图片数量，可以选择不同的方式，上面的例子，可以参考本网站的博文Gallery Test。其他的图片排列方式，可以查看文件：</p>
+<pre><code>..\themes\next\scripts\tags\group-pictures.js
+</code></pre><p>这种放置的方式，缺点就是不能使用fancybox。而且点进文章里面后，图片的排列方式就变回原来的一行一图了，就像Gallery Test那样。下面介绍在文中展示图片的方法。<br><div class="note primary"><h2 id="文中展示"><a href="#文中展示" class="headerlink" title="文中展示"></a>文中展示</h2></div><br>首先解决<code>group-picture.js</code>带来的问题，参考<a href="https://ehlxr.me/2016/08/30/%E4%BD%BF%E7%94%A8Hexo%E5%9F%BA%E4%BA%8EGitHub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%88%E4%B8%89%EF%BC%89/#%E5%85%AB%E3%80%81%E5%9B%BE%E7%89%87%E6%A8%A1%E5%BC%8F" target="_blank" rel="noopener">使用Hexo基于GitHub Pages搭建个人博客</a>的办法。修改</p>
+<pre><code>themes\next\source\css\_common\components\tags\group-pictures.styl
+</code></pre><p>中的样式为</p>
+<pre><code>.page-post-detail .post-body .group-picture-column {
+  // float: none;
+  margin-top: 10px;
+  // width: auto !important;
+  img { margin: 0 auto; }
+}
+</code></pre><p>这样就没问题了，文内的布局和首页的布局一模一样。当然如果你不想这样，也可以不用修改，把这篇博客作为一个纯的gallery展示也是很优雅的。但是即便是这样，记住还是不能用fancybox。而且这种布局方式，是不能隐藏在文内的，就是说不能靠添加<code>&lt;!-- more --&gt;</code>来在文中展示多张图，而不显示到首页。</p>
+<p>如果你一定要在文章并排添加多张图，只好用最后的办法，手动修改图片的引用格式，我直接添加了一个图片的class。如下这么做，我先修改了</p>
+<pre><code>\themes\next\source\css\_common\components\post.styl
+</code></pre><p>中的样式为</p>
+<pre><code>.post-body .fancybox img {
+display: block; 
+// !important;
+margin: 0 auto;
+cursor: pointer;
+cursor: zoom-in;
+cursor: -webkit-zoom-in;
+}
+</code></pre><p>就是把<code>!important</code>去掉了。然后在</p>
+<pre><code>\themes\next\source\css\_custom.styl
+</code></pre><p>里面添加</p>
+<pre><code>.img-3.img-3.img-3 {
+width: 33.3%; //一行三张，自己按百分比定义一行几张
+display: inline-block; //单行放置
+margin-bottom: -6px; //由于图片继承上一个class的底部横线，先覆盖
+background: white; //定义背景色，遮盖横线
+border: none; //去掉相框，可选
+}
+</code></pre><p>然后我们的引用图片格式是</p>
+<pre><code>&lt;img src=&quot;/images/wb4.jpg&quot; class=&quot;img-3&quot; /&gt;
+</code></pre><p>效果如下：<br>一张图<br><img src="/images/wb4.jpg" class="img-3"></p>
+<p>三张图<br><img src="/images/wb4.jpg" class="img-3"><img src="/images/wb4.jpg" class="img-3"><img src="/images/wb4.jpg" class="img-3"></p>
+<p>这样一行可以放置多个图片，也可以用fancybox了，比如可以在游记后面堆一些图，不用每张都是高清大图。另外要提一下的是，这里没有定义<code>max-height</code>，所以如果图片比例不一样，一行的图片会有高低不平，解决办法是：别搞一些比例奇怪的图放在一起。即使你在电脑上浏览正常，到了手机还是会出问题。</p>
+<p>当然如果你实在是想把一些比例奇怪的图片放在一起，有两种办法解决。</p>
+<h3 id="横向"><a href="#横向" class="headerlink" title="横向"></a>横向</h3><p>在文件</p>
+<pre><code>\themes\next\source\css\_custom.styl
+</code></pre><p>里面添加</p>
+<pre><code>.img-h.img-h.img-h {
+max-height: 120px;
+display: inline-block;
+margin-bottom: -6px;
+margin-top: -6px;
+background: white;
+border: none;
++mobile(){max-height: 60px;}
+}
+</code></pre><p>得到的结果就是，固定所有图片的高度，但是宽度各异，所以每一行的末尾会有空白。</p>
+<h3 id="瀑布流"><a href="#瀑布流" class="headerlink" title="瀑布流"></a>瀑布流</h3><p>同样添加</p>
+<pre><code>.newspaper {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-gap: 1px; /* Chrome, Safari, Opera */
+-moz-column-gap: 1px; /* Firefox */
+column-gap: 1px;
+margin-bottom: 20px;
+}
+.img-n.img-n.img-n {
+display: block;
+margin-bottom: -6px;
+background: white;
+border: none;
+}
+</code></pre><p>引用格式为</p>
+<pre><code>&lt;div class=&quot;newspaper&quot;&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;/div&gt;
+</code></pre><p>得到的结果就是三列图片瀑布流展示，示例请看<a href="http://wangwanglulu.com/2017/05/15/austria/" target="_blank" rel="noopener">Demo</a>的末尾图组。</p>
+<p>关于多张图片放置问题，更深入的修改就不知道，毕竟我的初衷不是做一个技术博客。当然如果你如只想一行放一张图，那就参考第一部分的首页展示一张图的放置方式吧。</p>
+<div class="note danger"><p><strong>本文作者</strong>： Lu Wang<br><strong>版权声明</strong>： 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！</p>
+</div>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/软件使用/" rel="tag"><i class="fa fa-tag"></i> 软件使用</a>
+          
+            <a href="/tags/Hexo优化/" rel="tag"><i class="fa fa-tag"></i> Hexo优化</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/27/move/" rel="next" title="Hexo：网站搬家">
+                <i class="fa fa-chevron-left"></i> Hexo：网站搬家
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/07/gamepre/" rel="prev" title="游赏：前言">
+                游赏：前言 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="vcomments"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="Lu Wang" />
+          <p class="site-author-name" itemprop="name">Lu Wang</p>
+           
+              <p class="site-description motion-element" itemprop="description">This is Lu Wang Zone's inner world projected on the reality. Update monthly.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/wangwang-lulu" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wangwanglulu.com" title="Notebook" target="_blank">Notebook</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://luluwangwang.com" title="Notebook (Alternative)" target="_blank">Notebook (Alternative)</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wangwanglulu.cn" title="Insomnia Heaven" target="_blank">Insomnia Heaven</a>
+                </li>
+              
+            </ul>
+
+          </div>
+         
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#首页展示"><span class="nav-number">1.</span> <span class="nav-text">首页展示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单个图片"><span class="nav-number">1.1.</span> <span class="nav-text">单个图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多张图片"><span class="nav-number">1.2.</span> <span class="nav-text">多张图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文中展示"><span class="nav-number">2.</span> <span class="nav-text">文中展示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#横向"><span class="nav-number">2.1.</span> <span class="nav-text">横向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#瀑布流"><span class="nav-number">2.2.</span> <span class="nav-text">瀑布流</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+          
+
+    </div>
+  </aside>
+
+  <div class="content-wrap">
+  <ul class="navigation">
+            <a class="main" >GO!</a>
+            <li class="n1"><a href="/categories/学术技术/">学术技术</a></li>
+            <li class="n2"><a href="/categories/旅行回忆/">旅行回忆</a></li>
+            <li class="n3"><a href="/categories/游赏系列/">游赏系列</a></li>
+            <li class="n4"><a href="/categories/生活随笔/">生活随笔</a></li>
+         </ul>
+         </div>
+
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lu Wang</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+<div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'c9RNKsD00tfxokI0L0LKW5uQ-gzGzoHsz',
+    appKey: '6TqB0Quo8JBjhkbVf67fNF9a',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("c9RNKsD00tfxokI0L0LKW5uQ-gzGzoHsz", "6TqB0Quo8JBjhkbVf67fNF9a");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+</body>
+</html>

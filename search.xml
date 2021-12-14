@@ -1,64 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>nbviewer分享Jupyter Notebook</title>
-      <link href="/2019/03/22/nbviewer/"/>
-      <url>/2019/03/22/nbviewer/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/images/b92.jpg"></p><p>Jupyter是将代码与写作结合的神器。如果只是自己跟自己玩，随便用个编程软件就欧了。但是既然都用上Jupyter了，说明要分享，记录一下怎么用github+nbviewer分享。</p><a id="more"></a><h4 id="1-创建一个新的respository"><a href="#1-创建一个新的respository" class="headerlink" title="1. 创建一个新的respository"></a>1. 创建一个新的respository</h4><p>比如取名为test，然后在本地比如说D盘打开git bash，clone这个respository到本地，输入<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/user/test.git</span><br></pre></td></tr></table></figure><br>user就是你用户名咯 (我这里是wangwanglulu)<br><img src="/images/nb/nb1.png" alt=""></p><h4 id="2-上传你的-ipynb文件到你刚才创建的respository"><a href="#2-上传你的-ipynb文件到你刚才创建的respository" class="headerlink" title="2. 上传你的.ipynb文件到你刚才创建的respository"></a>2. 上传你的.ipynb文件到你刚才创建的respository</h4><p>上传就是基本的git操作了<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br><span class="line"><span class="bash">git commit -m <span class="string">"first"</span></span></span><br><span class="line"><span class="bash">git push origin master</span></span><br></pre></td></tr></table></figure></p><h4 id="3-复制链接"><a href="#3-复制链接" class="headerlink" title="3. 复制链接"></a>3. 复制链接</h4><p>在网页登陆GitHub，打开你刚才创建的respository里的.ipynb文件，复制浏览器里显示的网址。 比如说我的是<br><img src="/images/nb/nb2.png" alt=""><br>粘贴到<a href="https://nbviewer.jupyter.org/" target="_blank" rel="noopener">nbviewer</a><br><img src="/images/nb/nb3.png" alt=""><br>回车就能看到生成的分享网页了。如果你要分享的话，就把这个网页的地址粘出去就OK了！</p><h4 id="4-网上编辑"><a href="#4-网上编辑" class="headerlink" title="4. 网上编辑"></a>4. 网上编辑</h4><p>如果你点击 Execute on Binder就能直接在网上运行Jupyter Notebook了，很神奇但是要耐心等一下。<br><img src="/images/nb/nb4.png" alt=""></p><p>最后，其实也有别的方法分享，比如生成html文件，然后上传到github，或者直接上传Python代码文件。但是偶觉得上面这个方法是值得推荐的。</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[nbviewer分享Jupyter Notebook]]></title>
+    <url>%2F2019%2F03%2F22%2Fnbviewer%2F</url>
+    <content type="text"><![CDATA[Jupyter是将代码与写作结合的神器。如果只是自己跟自己玩，随便用个编程软件就欧了。但是既然都用上Jupyter了，说明要分享，记录一下怎么用github+nbviewer分享。 1. 创建一个新的respository比如取名为test，然后在本地比如说D盘打开git bash，clone这个respository到本地，输入1git clone https://github.com/user/test.gituser就是你用户名咯 (我这里是wangwanglulu) 2. 上传你的.ipynb文件到你刚才创建的respository上传就是基本的git操作了123git add .git commit -m &quot;first&quot;git push origin master 3. 复制链接在网页登陆GitHub，打开你刚才创建的respository里的.ipynb文件，复制浏览器里显示的网址。 比如说我的是粘贴到nbviewer回车就能看到生成的分享网页了。如果你要分享的话，就把这个网页的地址粘出去就OK了！ 4. 网上编辑如果你点击 Execute on Binder就能直接在网上运行Jupyter Notebook了，很神奇但是要耐心等一下。 最后，其实也有别的方法分享，比如生成html文件，然后上传到github，或者直接上传Python代码文件。但是偶觉得上面这个方法是值得推荐的。 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
       <categories>
-          
-          <category> 软件使用 </category>
-          
+        <category>学术技术</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>在Github Pages部署Html5幻灯片</title>
-      <link href="/2017/09/20/reveal/"/>
-      <url>/2017/09/20/reveal/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/images/b112.jpg"></p><p>上课需要一种幻灯片，可以方便的展示代码，可以编辑数学公式，可以用markdown编辑，可以在网页上方便的浏览，也可以线下浏览。这里介绍一个“黑科技”，将幻灯片部署在我的个人主页上。</p><a id="more"></a><h3 id="Reveal-js"><a href="#Reveal-js" class="headerlink" title="Reveal.js"></a>Reveal.js</h3><p>Reveal.js绝对是幻灯片界的黑科技，可以看看它的<a href="http://lab.hakim.se/reveal-js/#/" target="_blank" rel="noopener">Demo</a>，还有它的<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="noopener">介绍文档</a>，感觉实在有点炫酷。</p><p>这里仅介绍怎么将幻灯片部署到我的个人主页上，具体怎么做幻灯片，参考一下介绍文档就可以了。</p><h3 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h3><h4 id="1-创建一个新的respository"><a href="#1-创建一个新的respository" class="headerlink" title="1. 创建一个新的respository"></a>1. 创建一个新的respository</h4><p>比如取名为test，然后在本地比如说D盘打开git bash，clone这个respository到本地，输入<br><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">clone</span> <span class="title">https</span>://github.com/user/test.git</span><br></pre></td></tr></table></figure><br>user就是你用户名咯。</p><h4 id="2-创建gh-pages-branch"><a href="#2-创建gh-pages-branch" class="headerlink" title="2. 创建gh-pages branch"></a>2. 创建gh-pages branch</h4><p>在你刚才创建的文件夹D:/test打开git bash，输入<br><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="comment">--orphan gh-pages</span></span><br></pre></td></tr></table></figure><br>这样你的gh-pages分支就创建好了。</p><h4 id="3-上传reveal-js到branch"><a href="#3-上传reveal-js到branch" class="headerlink" title="3. 上传reveal.js到branch"></a>3. 上传reveal.js到branch</h4><p>从<a href="https://github.com/hakimel/reveal.js/" target="_blank" rel="noopener">reveal.js</a>把文件下载下来，编辑index.html文件（这个就是你的幻灯片），然后全部拷贝到刚才的test文件夹，输入<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> .</span></span><br><span class="line"><span class="bash">git commit -m <span class="string">"1st commit"</span></span></span><br><span class="line"><span class="bash">git push origin gh-pages</span></span><br></pre></td></tr></table></figure><br>输入你账户的用户名和密码就搞定了！接下来试着访问一下 user.github.io/test，就可以访问幻灯片了。也可以下载下来，直接查看index.html，或者生成PDF文件。</p><p>至于具体怎么修改幻灯片，可以好好研究一下。</p>]]></content>
-      
-      
+      <tags>
+        <tag>软件使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[在Github Pages部署Html5幻灯片]]></title>
+    <url>%2F2017%2F09%2F20%2Freveal%2F</url>
+    <content type="text"><![CDATA[上课需要一种幻灯片，可以方便的展示代码，可以编辑数学公式，可以用markdown编辑，可以在网页上方便的浏览，也可以线下浏览。这里介绍一个“黑科技”，将幻灯片部署在我的个人主页上。 Reveal.js Reveal.js绝对是幻灯片界的黑科技，可以看看它的Demo，还有它的介绍文档，感觉实在有点炫酷。 这里仅介绍怎么将幻灯片部署到我的个人主页上，具体怎么做幻灯片，参考一下介绍文档就可以了。 设置方法 1. 创建一个新的respository比如取名为test，然后在本地比如说D盘打开git bash，clone这个respository到本地，输入 git clone https://github.com/user/test.git user就是你用户名咯。 2. 创建gh-pages branch在你刚才创建的文件夹D:/test打开git bash，输入 git checkout --orphan gh-pages 这样你的gh-pages分支就创建好了。 3. 上传reveal.js到branch从reveal.js把文件下载下来，编辑index.html文件（这个就是你的幻灯片），然后全部拷贝到刚才的test文件夹，输入 git add . git commit -m &quot;1st commit&quot; git push origin gh-pages 输入你账户的用户名和密码就搞定了！接下来试着访问一下 user.github.io/test，就可以访问幻灯片了。也可以下载下来，直接查看index.html，或者生成PDF文件。 至于具体怎么修改幻灯片，可以好好研究一下。 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
       <categories>
-          
-          <category> 软件使用 </category>
-          
+        <category>学术技术</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>简约GTD管理备忘</title>
-      <link href="/2017/09/20/gtd/"/>
-      <url>/2017/09/20/gtd/</url>
-      
-        <content type="html"><![CDATA[<p><img src="/images/b24.jpg"></p><p>由于你懂的原因，中国大陆限制有点多，这里记录一个极简约的GTD方法，适用Win系统，Mac应该有更方便的办法。</p><a id="more"></a><h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>和很多GTD中毒用户不一样，我的需求很简单：</p><ul><li>最方便快捷的邮箱，并且后缀不山寨，不复杂，不被当成spam。</li><li>日程管理方便设定，并且能在电脑手机多平台光速同步。</li><li>Todo list随时添加，随时修改，多平台同步。</li><li>稳定稳定稳定，不是那种昙花一现的软件，后面有“百年老店”维护。</li><li>全世界都可以使用。</li></ul><h3 id="设置方法"><a href="#设置方法" class="headerlink" title="设置方法"></a>设置方法</h3><h4 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h4><p>其实Gmail是最好的，但是避免出现状况，我选择了outlook，所以后缀就是outlook。这样可以与电脑版的outlook完美兼容，设置最简单。其他的邮箱我觉得都有各种各样的问题。</p><h4 id="日程管理和Todo-list"><a href="#日程管理和Todo-list" class="headerlink" title="日程管理和Todo list"></a>日程管理和Todo list</h4><p>就直接选择了outlook的日程管理，在电脑上添加是最方便的。</p><p>我用的是苹果手机，可以使用ios版的outlook，这样日历就光速同步到手机，并且易于修改。同时可以在苹果原生的邮箱软件里添加outlook账户，可以去掉邮箱这一项（因为这个邮箱实在没有outlook软件好用），添加calendar和reminder就足够了。</p><p>这样一来，邮件统一由outlook软件查看，日程同步到苹果原生的日历上。Todo list同步到苹果原生的reminder上。</p><h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>这套方法简单来说，就是</p><ul><li>outlook邮箱+日程管理+待办事项</li></ul><p>应该是最方便也最实用的。</p><p>当然有更复杂也更精细的GTD管理，那就需要花一些功夫折腾了。用多了outlook，我保证你会上瘾的。</p>]]></content>
-      
-      
+      <tags>
+        <tag>软件使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[简约GTD管理备忘]]></title>
+    <url>%2F2017%2F09%2F02%2Fgtd%2F</url>
+    <content type="text"><![CDATA[由于你懂的原因，中国大陆限制有点多，这里记录一个极简约的GTD方法，适用Win系统，Mac应该有更方便的办法。 需求 和很多GTD中毒用户不一样，我的需求很简单： 最方便快捷的邮箱，并且后缀不山寨，不复杂，不被当成spam。 日程管理方便设定，并且能在电脑手机多平台光速同步。 Todo list随时添加，随时修改，多平台同步。 稳定稳定稳定，不是那种昙花一现的软件，后面有“百年老店”维护。 全世界都可以使用。 设置方法 邮箱其实Gmail是最好的，但是避免出现状况，我选择了outlook，所以后缀就是outlook。这样可以与电脑版的outlook完美兼容，设置最简单。其他的邮箱我觉得都有各种各样的问题。 日程管理和Todo list就直接选择了outlook的日程管理，在电脑上添加是最方便的。 我用的是苹果手机，可以使用ios版的outlook，这样日历就光速同步到手机，并且易于修改。同时可以在苹果原生的邮箱软件里添加outlook账户，可以去掉邮箱这一项（因为这个邮箱实在没有outlook软件好用），添加calendar和reminder就足够了。 这样一来，邮件统一由outlook软件查看，日程同步到苹果原生的日历上。Todo list同步到苹果原生的reminder上。 结论这套方法简单来说，就是 outlook邮箱+日程管理+待办事项 应该是最方便也最实用的。 当然有更复杂也更精细的GTD管理，那就需要花一些功夫折腾了。用多了outlook，我保证你会上瘾的。 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
       <categories>
-          
-          <category> 软件使用 </category>
-          
+        <category>学术技术</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>软件使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[行忆画廊二：奥地利]]></title>
+    <url>%2F2017%2F05%2F15%2Faustria%2F</url>
+    <content type="text"><![CDATA[第二篇来到欧洲的奥地利，本次旅行时间是2011年12月，时值我在荷兰交流访学。实际上这次旅行最开始抵达德国慕尼黑，跨越边境到达奥地利，之后去到瑞士，途经列支敦士登。然而奥地利给我印象之深刻，值得单独拿来说说。 音乐之都 维也纳音乐之都，据说练街头卖艺的都是音乐家。但是一下火车就让我大跌眼镜，火车站门口坐了一个卖艺的，吹的是我们小学时候用的六孔竖笛，而且曲不成调。我想请问这位大艺术家，在街头卖艺不委屈您吗？然后我们就直奔金色大厅订了晚上的演出，多少天朝的艺术家以在金色大厅表演为荣，将此放在自己的简历里面。我的感觉就是，跟我在Informs年会上面讲了一篇文章差不多的档次吧。金色大厅终究也只是一个场地，没有评委来一场考核，说你够不够格来搞个演出。演出的质量怎么样，当然是交给听众来评判。但是话说回来，终究没有一点本事，谁也不敢主动跑到这里来献丑，所以应该说质量还是有把关的，由自己的脸皮把关。由于室内的光线不太好，所以下面照片的质量不高。 最后一张图就是我们的位置，在正席座位的后面一块，没有座位只能站着，头顶上还有转动的电扇。这里站满了游客，当然以中国的留学生为主。正所谓，音乐不分国界，欣赏不分贵贱，咱们站着也能领略金色大厅的优美音乐。其实，参与音乐会着装还是要正式一点，游客不可能随身带一套西装，而前排也以老同志居多。大厅没有任何扩音器，如果是歌剧声乐就完全看基本功和嗓子了，所以后来上来的歌剧演唱也令人不禁佩服。 萨尔茨堡萨尔茨堡以其为莫扎特故居著称。当然奥地利的著名音乐家多了去了，上面的五角星里面是舒伯特，以及拥有《蓝色多瑙河》这样烂大街名作的小约翰施特劳斯。莫扎特之所以这么有代表性，我认为多有被世人神化的色彩。萨尔茨堡还有很多别的景点，然而此地最让我印象深刻竟然是玩具博物馆，玩具以胡桃夹子为主，胡桃夹子木偶在奥地利有特殊的意义，象征着孩子们的保护神。同样歌剧《胡桃夹子》也是维也纳国家歌剧院反复上演的经典剧目，只不过作者是战斗民族的柴可夫斯基。 茜茜公主 来到维也纳，就不得不谈到茜茜公主。茜茜公主在嫁入皇室后，成为奥地利皇后，匈牙利皇后，被世人称为“世界上最美丽的皇后”。茜茜公主的故事在1955年被拍成电影，后来又有了第二部和第三部。这三部电影成为德语电影中的经典历史题材三部曲，并且票房不俗。然而她的人生并非一般人所想的那样，入赘豪门，成为一代少奶奶。她的人生在电影和现实里都充满悲剧和忧郁。由于Sisi博物馆不允许拍照，这里放上从网络获取的相关图片。下面是电影里的剧照，你看老妹儿笑得多开心。 电影的第一部讲述了茜茜公主和年轻的奥地利皇帝弗朗茨的相知相爱，最后结成连理，在我看来是一部浪漫轻喜剧。就和现在很多爱情片一样，是一个保洁小妹和霸道总裁的故事。然而现代爱情片迎合大众口味的一点就是，剧情往往在结婚处终结。就是说，整个故事讲述了两个年轻人互相吸引，保洁小妹向往自由，性格狂野，而霸道总裁受惯了条条框框，又对那些胭脂俗粉不屑一顾，对这种清新脱俗一见倾心。最后两个人突破重重障碍，喜结良缘，充满狗血的剧情。这是我们最熟悉不过的故事了，我都怀疑茜茜公主第一部电影是不是这类题材的鼻祖。下面图片是历史上的茜茜公主。 然而，茜茜公主电影高明的是，它在第二部第三部继续讲述她的婚后生活，这是现代爱情片都做不到的一点，人民群众也不喜闻乐见。婚后生活是什么？婚后生活就是柴米油盐，婆媳关系，夫妻矛盾。茜茜公主生性豪放，爱好自由自在，从小就生活在山野，不拘小节。宫廷生活充满了条条框框，丈夫又是个妈宝男，婆媳关系一塌糊涂。最令人忍俊不禁的是，第三部里面，婆婆还怀疑茜茜公主搞外遇。茜茜公主虽然享尽荣华富贵，却总是郁郁寡欢，但是她的美丽，充满魅力的性格，和浪漫的忧郁气质却深受臣民的爱戴。但是总体来说，茜茜公主自己不开心不乐意，对名利权力不感兴趣，拒绝扮演传统的妻子，所以她的一生是极其悲剧的。下面几张是在美泉宫的照片。 更悲剧的是，历史上的茜茜公主比电影里面演绎的似乎还要悲惨，连第一部里面的完美爱情都没有，晚年在日内瓦被人杀害。然而茜茜公主有一些政治上的贡献，她对凹胸帝国的成立以及哈布斯堡家族都有巨大的贡献，其影响力可与戴安娜王妃相比。在茜茜公主的博物馆里，我依稀记得有一幅油画，有她出席的重大宴会典礼，事实上莫扎特并没有出席，因为莫扎特比茜茜公主的时代要早个一百年，但是画师觉得这种重大的活动没有莫扎特太可惜了，就强行加上去了（此段纯凭记忆，准确性有待考量）。更多关于茜茜公主的故事就不展开了，可以看看那三部电影，也可以参考各种资料。 哈尔施塔特后记 哈尔施塔特其实我们最先去到的地方，是奥地利的一个村庄，本文最开始的图片来自网络，就是该村落的一景。因为奥地利以人文景观为主，最多的就是博物馆和故居，博物馆又不允许拍照，所以能呈现的部分不多，即便是呈现的照片也都没P过，但是又干嘛要P呢？我觉得，无论怎样做，单一的视觉呈现都不能完整的表达奥地利，倒不如以此作为引子，走走听觉的路子，或许会有更加深刻的体验。听听下面这首就是在莫扎特故居Mozarts Wohnhaus里面循环播放的背景音乐。 var ap = new APlayer({ element: document.getElementById("aplayer-SHwWbHiu"), narrow: false, autoplay: false, showlrc: false, music: { title: "Piano Sonata no. 10 in C major, K. 330 - III.", author: "Mozart", url: "/music/Mozart K330.mp3", pic: "/music/Mozart.jpg", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap); (PS. 当然最后那个是扯淡的，随便找了一首莫扎特的钢琴奏鸣曲而已，并不是什么背景音乐，那么久远的事情我怎么可能还记得。有兴趣可以到Musopen去找找听听。) 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
+      <categories>
+        <category>旅行回忆</category>
+      </categories>
+      <tags>
+        <tag>欧美游记</tag>
+        <tag>旅行画廊</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[行忆画廊一：埃及]]></title>
+    <url>%2F2017%2F05%2F13%2Fegypt%2F</url>
+    <content type="text"><![CDATA[终于还是开始写游记了，而且是对着照片写。游记也不能写成流水账，第一篇从埃及开始。本次旅行时间是2013年1月，是直至这篇文章为止，最后一次纯休闲，自费旅游。 空壳文明 就像大清国为我国电视剧事业做出了巨大贡献一样，埃及文明在西方幻想类题材的影视剧游戏方面同样功不可没。可惜的是什么呢？可惜的是埃及和另外两个古文明一样，没有传承文明的人，真正的埃及人早就绝种了。四大文明只有中华文明，像打不死的小强一样，代代传承。古埃及先被波斯人征服，然后先后经历马其顿，古罗马的统治，之后阿拉伯人开始统治埃及，时至今日古埃及文明消亡殆尽。既然是阿拉伯人，就少不了清真寺，当然还有教堂。 因为我们怕去了埃及，英文行不通，所以报了团。导游是一个会中文的当地人，他给我们说，埃及是一个包容的国家，在这里教堂和清真寺并存，而且很和谐。然后他又说，全世界的穆斯林都是兄弟。我不知道他影射了什么，这个诡异的宗教历史上总给人一种屌丝的感觉，所作所为也是一团乱麻。鉴于这是一个不谈政治的博客，就不展开了。 金字塔和遗迹 开罗我们来埃及当然不是看清真寺的，但是第一天硬是被导游带着游遍了开罗的清真寺，真尼玛受不了。第二天才有机会一睹金字塔。金字塔建在开罗市郊，和开罗市区简直是两个世界。 谈到首都开罗，就搞笑了，这里整个就是80年代中国农村的范儿，风沙大得不了，几乎所有停在街上的汽车没有一辆的挡风玻璃是没有裂痕的，没人修也没必要修。公交清一色的白色小面包，并且不关门，随时上下，甚是方便。最恐怖的是，这时候正值埃及反对新上任的总理，街上时不时还能来几声枪响。这幅破破烂烂的景象，我不禁想这个城市的经济支柱是什么，该不会是旅游业吧。恶心的阿拉伯人商人靠着古埃及文明发财，这是最好的解释。 金字塔就比我想象的要大太多了，并且是可以进去的。上面最后一张图就是我刚刚从金字塔里面出来，闷得我一头的汗。说实话，游客能探索的地方啥也没有，除了石壁和楼梯。狮身人面像就坐落在金子塔旁边不远处，我一直以为就是斯芬克斯，经查证，并不是。狮身人面像是没有鼻子的，一种说法是在十四世纪被一个极端的穆斯林摧毁的，如果这个说法是真的就很讽刺了，另一种说法是被拿破仑的军队炮击脱落了。 卢克索卢克索位于开罗南部的尼罗河畔，拥有埃及古都底比斯的遗迹。说到卢克索，我总是会想到下面这个， 事实上这款游戏优雅的再现了卢克索的部分景观。相比阿拉伯文明已经根深蒂固的开罗，卢克索是一片净土，历代古埃及法老在这里兴建了无数的神庙，宫殿和陵墓，其中最著名的陵墓就是帝王谷。考虑到古埃及文明出现距今7000年之久，这些遗迹固然残缺不全，但还是能依稀感受到昔日的强盛。其他的就没什么好说的了，直接上图。 黑白沙漠 我们放弃了另一座古城阿斯旺，直接去到埃及沙漠，过夜。埃及沙漠的看点在于所谓的“黑白沙漠”。沙漠给人的传统映像就是一望无际，单调，炎热，然而你真的身处其中的时候，会觉得确实是值得体验的。沙漠里的石灰石岩石在经历了数千年的打磨侵蚀之后，形成了各种各样的造型，体积不大的岩石就平铺在沙漠中间，形成“白沙漠”。而火山爆发后散落在沙漠里的黑色石砾，形成“黑沙漠”。 然而最令我震撼的，倒不是沙漠，而是星空。因为工业文明的盛行，现在在城市里很难看到密密麻麻的星空，在天朝就更难了。如果住在这里的人有密集恐惧症的话，那他们每天晚上都很恐怖。星空中可以清晰的看到有一条银河横跨其中，据说在西藏的星空和这里也差不多。遗憾的是，我带的相机曝光度不够，光圈不太够，照不出来那种景象，所以就从网上搜了几张图放到下面，差不多是这种感觉。 红海后记 因为我自己的各种愚蠢，无法乘上回加拿大的飞机，所以只好改签，独自一人多留三日。那时年少的我就想啊，何不趁着三天时间，去红海来一发潜水。这趟说走就走的旅行终止于第二天的钱包被偷。我在距开罗机场200多公里的地方，身无分文。我以为全世界的警察都应该像天朝一样，对外国游客关怀备至，事实上是，求助警察屁用没有，求助当地的华人协会更是碰了一头灰，最后讲义气的旅行社借了我500埃及币，折合人民币也是500，让我得以逃出埃及。 回顾这次旅行，中间有无穷无尽的阿拉伯小市民，找你要钱要烟，城市破烂不堪，在景点也是充满了各种欺诈。在卢克索乘坐过的热气球，一周后看新闻，一批香港游客在卢克索乘坐的热气球从空中坠落，无一幸存。种种景象，使我对阿拉伯世界的印象大打折扣。好在古埃及文明对我的吸引从未减弱，而与之毫无关联的现代埃及人，却坐拥这块天赐的福地。中国人老说老祖宗的东西不能糟蹋，对他们来说，这又算什么呢？ 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
+      <categories>
+        <category>旅行回忆</category>
+      </categories>
+      <tags>
+        <tag>旅行画廊</tag>
+        <tag>亚非拉游记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[随笔：流派]]></title>
+    <url>%2F2017%2F05%2F10%2Fschool%2F</url>
+    <content type="text"><![CDATA[欲写游记，忽感悟游记界流派林立，正值朋友圈大行其道，恰有百花齐放，百家争鸣之势。胡乱写文一篇，此文亦可作行忆画廊：前言。 三大流派 脑残派第一派是朋友圈里面最常见的，无主题无目的无想法，足以让小学四年级作文老师哭晕在厕所。充斥的都是这种，“×××太好看了”，“×××太好玩了”，“×××太好吃了”，最后放上一组图。感觉从来没在地球上活过，对什么都充满好奇，什么都有趣，什么都好玩。最后千万不能忘了照几个合影，证明你来过这个地方。 省钱派穷游论坛资深会员，写游记也是满满的穷游味。每到一个餐馆一个景点，都不忘报一下价格，就怕人家不知道您家最会省钱，绝对的贤妻良母，一定是持家有道。如果被坑了，也不忘批评一下奸商，同时综合评价一下本次行程，结论一定是“虽然有些不满意，但是还是很值的。” 装小资派照片绝对不能露全脸，绝对不能不P，绝对不能少了咖啡，晚霞，人影，手势，或者找几个歪国人合影。加上不知道从哪里抄来的诗句，或者国外哪个傻叉的名言，看几个破房子都能一大堆感想。懒得搜名人名言的就自己写打油诗，一定要文不对题，最好是让人读不懂。文中涉及几个历史事件，几个外国屌丝，先装小资装纯，然后又怕人嘲讽，加几个自嘲的段子，或者跳tone，一下变得无比实在亲民。笑话越冷越好，气氛越尴尬越显得高人一等。 鄙视圈后记 神奇的是，这三个流派的人，没有形成鄙视链，形成鄙视圈。脑残派鄙视省钱派，省钱派鄙视装小资派，装小资派鄙视脑残派。无法形成均衡，纳什老爷子九泉不能瞑目。 本博主怎么写？当然是博取众家之长，自创一套流派，取名为 ——脑残省钱小资派 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
+      <categories>
+        <category>生活随笔</category>
+      </categories>
+      <tags>
+        <tag>负能量随笔</tag>
+        <tag>杂谈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[游赏：前言]]></title>
+    <url>%2F2017%2F05%2F07%2Fgamepre%2F</url>
+    <content type="text"><![CDATA[我决定写一个专题，探讨一下游戏中的机制。这里主要选取了稍微nerd一点的游戏——卡牌类游戏。不同于电脑或者主机游戏，卡牌游戏没有生动的画面和绚丽的音效，只能依靠游戏机制本身去吸引玩家，拥有纯粹的游戏感，也较为容易解读游戏设计者的思想。 游戏选择 经过一番蜜汁思考，我决定从几个公认有影响力的奖项的提名获奖名单里，参考我要评论的游戏。我一点也不想去点评烂游戏，博人眼球。以下是几个著名的奖项： Golden Geek AwardsGolden Geek Awards是桌游论坛BoardGameGeek设立的年度奖项，由该论坛的注册用户评选而出。BoardGameGeek论坛在2000年建立，是一个桌游爱好者的专业平台，并且举办年会。2010年，该论坛获得荣誉称号 “a resource without peer for board and card gamers, the recognized authority of this online community.” Spiel des Jahres (SDJ)SDJ，SDJ官方网站，又称德国年度游戏大奖，是世界上最有影响力的桌游奖项。该奖项在1978年创办，由德国年度游戏奖评委会颁发，评委会由资深记者和相关从业人员组成。SDJ主要是奖励一些老少咸宜的游戏，不包括一些比较复杂或者竞技性很强的游戏。可惜的是，该奖仅颁发给德国本土的游戏。 Deutscher Spiele Preis (DSP)DSP是由德国杂志Die Pöppel-Revue于1990年创立。投票来自于商店，杂志，专业人士和桌游社团。这个奖项弥补了SDJ只奖励休闲游戏的局限，DSP同时奖励专门为玩家设计，很有特点和创意的游戏。 当然还有一些别的奖项，如International Gamers Awards (IGA)， Mensa Select，以及Games杂志编辑选出的游戏，但是一般好游戏都会获得多个奖项，所以没有必要把范围弄的太广。 初衷 Why start？我为什么要开始这个专题？答案很简单，就是好玩。其实写一个评论对我的职业和生存是没有任何影响的，这只是一个单纯的博客，没必要太认真。我认为游戏反应了人最纯真的思考，虽然里面有一些商业上的考量，但是相比影视音乐，是无与伦比的人类智慧结晶。我们设定了规则，规则兼顾公平和竞争，同时包含趣味。 规则物语规则是人类能够发明的最体现思考本质的东西。第一类规则是本质的。人类千百年来做研究就是解读自然界的规则，虽然至今我们也没有把自然界的规则摸透，但是丝毫不能阻止人的好奇心。人为解读的规则，就是我认为的第二类规则，我们有很多很多理论，解读自然界，解读社会，我们在这些规则下解释不能理解的东西，运用规则生产和生存。第三类规则就是人为创造的，比如说宪法，这些规则有的是生活中慢慢形成的，有的是理想化的东西。 然而，我认为，前三类规则都无法脱离现实本身，必须在真实的环境下运作。而影视游戏中规则是虚构的，是纯思维性质的。虚构的作品中有很多对现实规则的颠覆。颠覆了之后怎么办？让我们看看在新的规则下，会出现什么情况，我们要动动脑子去思考，趣味就产生了。我称之为，“第四类规则”。 在我看来，所有的虚构类作品，脱离了外在的形式之后，都有设定规则的成分，就好像金庸的小说，规则就是外功和内功相辅相成。而富奸能被称为创作鬼才，就是他对规则的理解要高人一筹（可参考最新的Hunter×Hunter的351-356话，反正这几话把我搅晕了）。游戏中的规则，比影视动漫又更深入，它让人参与其中，在我看来，是在“亲身实践”人为虚构的规则。 游戏的规则有没有缺陷呢？有很多的。最让人无法忍受的一个缺陷，就是一个游戏会出现“dominant strategy”。就是说，你玩一个游戏玩了很长时间，就会逐渐找到一些必胜的策略，比如说五子棋如果没有“三三”，“四四”禁手，几乎就是先手必胜，你先落子你就必胜。早期的三国志游戏，包括很多游戏，赚钱就是“dominant strategy”。你先发展好经济，有了足够多的钱，就可以战胜对手。 怎么解决这个“dominant strategy”的缺陷呢？我认为有以下几种方式。这里就是最能体现游戏设计者的智慧的地方了。 随机性加入随机性是最直接的解决方法，比如说石头剪子布就是纯纯的随机游戏，毫无策略可言，至少你没有一个可以应对所有人的策略。三国志游戏，也会突然给你来个天灾，或者哪个武将挂了。加入随机性可以一定程度上避免先手的优势。然而问题来了，所谓随机性，就是说要在几个状态中以一定的概率转换，否则不称其为随机。换句话说，我们需要有几个状态来给我们搞随机，如果只有一个状态，还随个鬼。如果你要面对的是无穷的状态，自然找不到最优的策略。 那么怎么设定状态呢？有两种方法，第一种是机器设定。拿人打个比方，如果人的身高体重是纯随机产生的，在出生的那一刻，上帝给你随机赋予了属性。所以状态的数量=可选的身高数×可选的体重数。游戏也会在初始时或者游戏中加入上帝视角的随机变量。第二种是对手设定，如果是人和人的对抗，那么至少对手怎么想的，是随机的，他很有可能出一些阴招怪招，你想不到的。所以就需要游戏的设计者给予玩家足够多的选项，允许一些超越常规但又不影响公平性的招数。 约束指标然而有时候，随机性还不够，我们要加入约束指标，比如说时间限制，比如说围棋中的先手贴六目半（天朝七目半）才能获胜，比如一个人的钱不能太多，多了就要“交税”。这样限制了一个策略的绝对优势，就给予了思考的空间。 目标转换最后一个是目标转换，比如三国志游戏中，虽然赚钱也许是最优策略，但是游戏获胜的目标并不是成为大富翁啊，游戏需要你占领所有城市。你需要把钱转换成战斗力去攻城略地。让最优策略和目标不一样，可以避免一根筋走到黑的情况。 以上是我对一个游戏的规则设定的理解，当然了，很多游戏玩多了之后，还是会出现最优策略，但是丝毫不影响其游戏性，那就是有别的东西有趣了。所有规则都有缺陷，缺陷是难免的，好游戏的缺陷自然是少的，至少是很难让人发现的。这里只是按照我自己的理解，讨论了一下最恶心的缺陷，别的缺陷，过得去就行了。 评论啥？讨论啥？回到主题，我们评论个啥？我不深入讨论游戏的材料是不是精良，背景故事是不是完善，我就想看看游戏的机制是什么，游戏设计者怎么想的。 局限性我并不是什么游戏高手，也不是专业评论家，我要写的都是最直接的感受。而且遗憾的是，我没那么多时间也找不到人去玩这些游戏。但是我觉得游戏的机制设定是有意思的，它让我感到一丝丝的不安，这种不安源自一种对抽象事物的不理解，并随时随地让我思考现实中的理论。 谁也不知道这种不安会将自己引向何方，但是这正是乐趣所在，不是吗？ 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
+      <categories>
+        <category>游赏系列</category>
+      </categories>
+      <tags>
+        <tag>小众游戏</tag>
+        <tag>游戏机制</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo：图片展示]]></title>
+    <url>%2F2017%2F04%2F27%2Fphoto%2F</url>
+    <content type="text"><![CDATA[Hexo所提供的图片展示方法始终是有限的，但是要做一个简单而优雅的网站，太多的图片展示方式，反而会显得凌乱不堪。这里记录一下图片展示的各种方法，可以为日后的图文博客做模板。首页展示 单个图片这里仅介绍几种不改变主题太多的图片展示方式，更加深入的定义图片格式，修改css，请参考为 Hexo 主题添加多种图片样式。最简单的展示方式，就是直接在markdown的标题栏里添加链接，我们用b12.jpg这个图片做个例子。 &lt;img src=&quot;/images/b12.jpg&quot; /&gt; 如果是需要图片突破容器宽度，参照next文档，可以添加 &lt;img src=&quot;/images/b12.jpg&quot; class=&quot;full-image&quot; /&gt; 当然同样也可以使用标签方式， {% fullimage /images/b12.jpg, alt, title %} {% fi /images/b12.jpg, alt, title %} 如果你有用hexo的数据存储格式的话，就是在文章的根目录建立与markdown文件同名的文件夹，并且把图片放在里面的话，那么可以用 {% asset_img g2.jpg This is an example image %} 这里This is an example image是图片的说明。 多张图片如果想在首页添加多个图片，就必须在标题栏里添加 photos: - /images/b7.jpg - /images/b6.jpg - /images/b5.jpg 这里有三张图，所以这三张图并排在一行。如果是两张图就是，两张图并排在一行，并且把容器填满。据我自己测试，如果是四张图的话，第四张图就会被挤到第二排，然而第二排并没有被占满，后面留下丑陋的空白。如果是六张图的话，第一排三张图，第二排三张图，全部被占满，所以请思考一下用这种方式，放几张图比较好看。 这里要注意了，以上的几种图片放置方式，都是支持fancybox的。下面要说的就是next主题内置的一个图片放置方式，不支持fancybox，但是首页显示会比较好看， {% gp 4-2 %} 第一张图片的地址 第二张图片的地址 第三张图片的地址 第四张图片的地址 {% endgp %} 采用这种方式后，图片就会按照一定的方式把容器占满，当然对应不同的图片数量，可以选择不同的方式，上面的例子，可以参考本网站的博文Gallery Test。其他的图片排列方式，可以查看文件： ..\themes\next\scripts\tags\group-pictures.js 这种放置的方式，缺点就是不能使用fancybox。而且点进文章里面后，图片的排列方式就变回原来的一行一图了，就像Gallery Test那样。下面介绍在文中展示图片的方法。文中展示首先解决group-picture.js带来的问题，参考使用Hexo基于GitHub Pages搭建个人博客的办法。修改 themes\next\source\css\_common\components\tags\group-pictures.styl 中的样式为 .page-post-detail .post-body .group-picture-column { // float: none; margin-top: 10px; // width: auto !important; img { margin: 0 auto; } } 这样就没问题了，文内的布局和首页的布局一模一样。当然如果你不想这样，也可以不用修改，把这篇博客作为一个纯的gallery展示也是很优雅的。但是即便是这样，记住还是不能用fancybox。而且这种布局方式，是不能隐藏在文内的，就是说不能靠添加&lt;!-- more --&gt;来在文中展示多张图，而不显示到首页。 如果你一定要在文章并排添加多张图，只好用最后的办法，手动修改图片的引用格式，我直接添加了一个图片的class。如下这么做，我先修改了 \themes\next\source\css\_common\components\post.styl 中的样式为 .post-body .fancybox img { display: block; // !important; margin: 0 auto; cursor: pointer; cursor: zoom-in; cursor: -webkit-zoom-in; } 就是把!important去掉了。然后在 \themes\next\source\css\_custom.styl 里面添加 .img-3.img-3.img-3 { width: 33.3%; //一行三张，自己按百分比定义一行几张 display: inline-block; //单行放置 margin-bottom: -6px; //由于图片继承上一个class的底部横线，先覆盖 background: white; //定义背景色，遮盖横线 border: none; //去掉相框，可选 } 然后我们的引用图片格式是 &lt;img src=&quot;/images/wb4.jpg&quot; class=&quot;img-3&quot; /&gt; 效果如下：一张图 三张图 这样一行可以放置多个图片，也可以用fancybox了，比如可以在游记后面堆一些图，不用每张都是高清大图。另外要提一下的是，这里没有定义max-height，所以如果图片比例不一样，一行的图片会有高低不平，解决办法是：别搞一些比例奇怪的图放在一起。即使你在电脑上浏览正常，到了手机还是会出问题。 当然如果你实在是想把一些比例奇怪的图片放在一起，有两种办法解决。 横向在文件 \themes\next\source\css\_custom.styl 里面添加 .img-h.img-h.img-h { max-height: 120px; display: inline-block; margin-bottom: -6px; margin-top: -6px; background: white; border: none; +mobile(){max-height: 60px;} } 得到的结果就是，固定所有图片的高度，但是宽度各异，所以每一行的末尾会有空白。 瀑布流同样添加 .newspaper { -webkit-column-count: 3; /* Chrome, Safari, Opera */ -moz-column-count: 3; /* Firefox */ column-count: 3; -webkit-column-gap: 1px; /* Chrome, Safari, Opera */ -moz-column-gap: 1px; /* Firefox */ column-gap: 1px; margin-bottom: 20px; } .img-n.img-n.img-n { display: block; margin-bottom: -6px; background: white; border: none; } 引用格式为 &lt;div class=&quot;newspaper&quot;&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;img src=&quot;图片地址&quot; class=&quot;img-n&quot; /&gt;&lt;/div&gt; 得到的结果就是三列图片瀑布流展示，示例请看Demo的末尾图组。 关于多张图片放置问题，更深入的修改就不知道，毕竟我的初衷不是做一个技术博客。当然如果你如只想一行放一张图，那就参考第一部分的首页展示一张图的放置方式吧。 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
+      <categories>
+        <category>学术技术</category>
+      </categories>
+      <tags>
+        <tag>软件使用</tag>
+        <tag>Hexo优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo：网站搬家]]></title>
+    <url>%2F2017%2F04%2F27%2Fmove%2F</url>
+    <content type="text"><![CDATA[这个next主题被我改得太多了，中间的修改参考了很多别人的文章。这里记录一下我在参考了众多文献后的搬家过程，具体怎么弄也可以到知乎去搜索。 上传本地文件直接在网页里，新建了一个仓库，取名为hexo。用github desktop将hexo仓库clone到本地。这里我先备份了所有的生成网页的源文件，然后拷贝所有文件到clone文件夹。 在根目录中有一个文件名为.gitignore，里面记录了所有不会被上传的文件夹。其中有些文件是没有必要被上传，纯粹拖慢速度，比如说node_modules，public(这个网站我没有用hexo d，所以没有deploy的文件夹)。这个时候要注意了，如果不在根目录添加一个文件.gitmodules，主题里面的next文件夹是不会被上传的。这个时候手动添加该文件，内容如下： [submodule &quot;themes/next&quot;] path = themes/next url = https://github.com/iissnan/hexo-theme-next 然后就可以在github desktop里面commit了再上传到github。 持续集成我这里没有添加hexo-deployer-git --save，因为觉得这种更新方式太麻烦了。我是利用Appveyor的持续集成方法，具体的可以参考Hexo的版本控制与持续集成。其实，如果你用了Appveyor，而且在新电脑上只是想添加几篇文章的话，在新电脑上直接用github desktop更新你的source文件夹就足够了。同理，可以用手机直接登录github的网页添加修改博客，随时随地写博客。但是如果你还想继续调试hexo，或者添加一些其他的功能的话，请继续往下看。 另一台电脑上的操作下载Node.js，并且安装。在新电脑上，在任意一个目录里创建名为hexo的文件夹，在里面安装hexo，在该目录下用git bash输入 npm install hexo-cli -g npm install -g hexo npm update hexo -g 然后，打开你在新电脑上安装的github desktop，clone你的hexo仓库到刚才创建的hexo文件夹。比如说你在d:/hexo这个文件夹，那你就clone到d:/。这个仓库里的文件是没法生成网页的，你缺的就是node_modules这个文件夹，所以输入npm install，最后测试输入hexo g，成功的话就可以用了。 另外，如果最后那个npm install用了之后还是无法成功，你可能要额外安装你自己曾经添加过的模块了，比如下面这些东西： npm install hexo-tag-aplayer --save npm install hexo-tag-dplayer --save npm install hexo-util --save npm install hexo-tag-cloud --save 还有什么，我想起来再添加。 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
+      <categories>
+        <category>学术技术</category>
+      </categories>
+      <tags>
+        <tag>软件使用</tag>
+        <tag>Hexo优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[旧文二：传教]]></title>
+    <url>%2F2017%2F04%2F26%2Fpreach%2F</url>
+    <content type="text"><![CDATA[本文写于2013年11月11日 这一次与前几次有点与众不同，所以写一下。第一次碰到个中年妇女，对我使出了“嘴遁，‘你懂个屁’之术”，以连续抛出问题轰炸的方式，证明我的无知而无畏。第二次碰到个棒国老奶奶，直接给我唱福音，由于我也喜欢跟这些人探讨人生（或者说练习口语），前前后后耗了有半个小时。她还告诉我她孙子是妈婶立功的（原来信这个可以让直系亲属变聪明）。 这次是个年轻的男的，在地铁里突然站到我面前。运用FBI鉴定法，分析他的举手投足，和神态眼神，经过性格分析等多次辗转，我最终通过他胸前的名片知道了他是来传教的。 “Schooling stuff?”他指着我手里的文件问道。“Yes”我对答如流。此处省去几百字的客套话，我基本不排斥传教活动，所以没表现出任何不适。 “你相信有神吗？” 他终于进入主题了。“我相信有。” 我确实相信有“哪你觉得神应该是什么样的？”进一步勾引“我觉得，神绝对不会长得像个人。” 他被呛到了，反问道，“那你觉得应该是什么样？”“是一种规律。”我说。“啊？”他没听清楚。“我说，是rules..rules！”他若有所思轻轻的说了句 “有意思…” 然后… 然后他就嗝屁了，一路上再没说话… (PS. 我已经想好怎么回答他接下来的问题了，诸如什么rules，信仰等等。 但是他既然已经“男默女泪”了，我也只好“人艰不拆”。) 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
+      <categories>
+        <category>生活随笔</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>正能量随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[旧文一：建站小记]]></title>
+    <url>%2F2017%2F04%2F26%2Fsitebuild%2F</url>
+    <content type="text"><![CDATA[本文写于2015年7月4日 本文记录了他手工原创的不好用 (但是确很好看) 的第一版主页的心路历程。该网站已弃用，不过依然可以浏览。 第一版的通道：初代璐领域 本篇日志旨在记载建立个人网站中的一些心得体会以及灵感来源。建站初衷大概在两周以前，突然神经病发了，想做一个个人网站。然而，学术圈的前辈们的个人网站基本以简约实用为主，背景图片简单，导航条也是一目了然。我辈骚年难以抚平心中做一个炫酷网站的热情，于是开始抽时间学习Dreamweaver，旨在从底层做出自己的个性。视频教程中的范例网站又无一不是让人呕吐级别的。为了保护自己的胃，又开始学Flash制作。国内的教学视频中的范例总给人一种九十年代山寨的感觉，老师讲得不错，但是口音就是庞麦郎式的，只能强忍着又去看了一下Photoshop。自此终于可以开始做网站了。 刚开始的时候整个过程可以用“痛苦”两个字形容。因为技术水平远远赶不上自己创意速度，要做一样东西总需要再到网上去搜代码，部分教学视频又要重新看。等到一个内容做好了，发现实现途径及其愚蠢，而且和后面的界面结合不起来，只能重新做。反反复复几次以后，明白了在做之前画一个流程图是很重要的。。。（最后做成的全部都是静态网页，不能互动，又只能手动维护和更新。因为没有采用PHP+MySQL系统，暂时没时间从底层开始学，不会用wordpress，可以说为个性化付出了沉重代价。） 总的来说，最终的网站还是没有脱离简约实用（汗），但总体上保持了美观大方。这中间的痛苦告诉我，想从底层做一个炫酷的网站基本上靠一个人的努力是比较难的。我想大部分让人眼前一亮的网站界面都是团队合作的结果，一个人负责图片，一个人负责文稿等等。一个人做的结果就是：网站以龟速更新。尽管如此，我还是觉得，技术的东西都是低端的，一个人有超高的编程技术，却没有一颗骚动的心，做出来的东西就是呕吐级别。创意和想法才是上层建筑，一个人对美的鉴别能力决定了他想做成什么样的。然而恰恰是这种人又很少有耐心去研究技术和细节。正常人每天泡在代码里面又很难去花时间去思考设计，所以团队里面永远都需要一帮人作“大脑”，另一帮人负责“手”的工作。反思生活建立个人网站让我开始审视自己的生活，“我到底有多少内容是可以呈现在网上的”。在每一个板块界面的华丽之下，内容却是无比的空虚。个人网站是面向对象的一个载体，在这个载体中，你几年的努力能够写在页面的往往就是一句话。外部世界永远喜欢用标签去定义一个人，理想和经历在标签下被无限压缩。无怪乎，现在主流的社交平台都是“短平快”的。 哪怕是一百个字以内的微博也总是一些没营养的东西，看不完的图片和照片。在微博刚开始盛行的时候，我一度很排斥，一百个字能够讲述什么，无非就是吐吐槽，讲讲自己的小心思。看的人也方便，只需要去看看“标签”就好了，内容细节什么的不必花时间了解。似乎我再丰富，想法再多，想要用标签去填满这个网站也是不可能的。 记得以前看过知乎的一篇文章说，很多人似乎都把“爱好特长”和“业余消遣”搞混了。很明显，“看书”，“看电影”，“打游戏”什么的应该算“业余消遣”。中学时候，好多人在同学录里面写自己的爱好是睡觉，当然是开玩笑的。在定义自己生活的丰富程度的时候，我更倾向于“爱好特长”，如果这个个人网站充满了“旅游”，“照片”，“鸡汤”，我觉得那就是失败的。我想，每一个人在总结自己的生活或者做一个个人的网站或者资料的时候，应该多想想“有什么东西是自己的”，“有什么东西是可以让别人感动的”，“又有什么东西是自己闲得蛋疼弄出来的”。诚然，在所有人都很努力的前提下，一个人想在自己专业领域干出点成绩都是很难的。哪怕是这样，我也不希望我的网站全都是专业的东西（尽管我也没干出成绩），就算是全面且平庸，也是我的一种生存之道。想法来源接下来记录一下在做网站中的一些想法来源。我必须感谢在我人生一小段时间中陪伴我的游戏，这些游戏给了我一些设计的想法。在做主界面和过场动画的时候，PSP上的LocaRoca给了我设计色块的想法。同时也怀念一下玩这款有趣游戏的美好时光。 主界面的磨砂玻璃效果以及相册中方形色块无疑来自于Windows 8的设计风格。 在考虑个人资料的呈现的时候，用了著名的斐波那契数列，具体资料可以去Wiki。 博客界面来自于著名的国产RPG，轩辕剑-外传-天之恒的水墨风格。那部破烂电视剧就不吐槽了。以及街霸4的水墨风，注意图中的墨点。 很久没写文章了，文笔有点烂，感谢您耐心的读完这篇又臭又长，后续的网站内容会继续做完。 同样，我们的生活未完待续… 本文作者： Lu Wang版权声明： 本博客所有文章除特别声明外，均采用 CC BY-NC-SA 3.0 许可协议。转载请注明出处！]]></content>
+      <categories>
+        <category>生活随笔</category>
+      </categories>
+      <tags>
+        <tag>杂谈</tag>
+        <tag>正能量随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[关于]]></title>
+    <url>%2F2017%2F04%2F25%2Fbio%2F</url>
+    <content type="text"><![CDATA[2017年9月5日更新。 博主是我。除了这个网站，还有用于工作的平台 (Lu’s Notebook)。曾经尝试过各种建站方式，但是我个人最喜欢的，就是您现在看到的这个网站。 var ap = new APlayer({ element: document.getElementById("aplayer-lkKLKvft"), narrow: false, autoplay: false, showlrc: false, music: { title: "To my I", author: "Keysholic", url: "/music/To my I.mp3", pic: "/music/To my I.jpg", lrc: "" } }); window.aplayers || (window.aplayers = []); window.aplayers.push(ap); 关于个人 我是多伦多大学Rotman商学院，运筹管理的博士，是一个功利的理想主义者，爱好过于广泛，全民114。目前就职于上海财经大学。关于网站 2015有人向我咨询怎么建立网站，我当时对建站一无所知，只能坦言不会。事后，作为一个资深的全民114，自尊心作祟，开始研究网站。建立了第一个个人网站 (初代璐领域)。使用的是多伦多大学的个人空间，50M，只能上传静态网页。 这个网站用flash做的动画，内容全部手动更新，是白手起家从底层写出来的，可以说相当费劲，不易维护，遂放弃，不过目前依然可以浏览。 2016领悟了做网站最重要的不是形式，而是内容这个道理以后，开始转向wordpress平台，也就是Lu Wang Zone(彻底关闭，停止使用)。使用的是openshift的云计算平台，并且绑定了域名，终于进化到动态网页。 这个网站直接使用了模板，对于一个曾经从底层做网站的人来说，非常简易。但是动态网页也有缺点，而且因为openshift部署在国外，所以网站打开速度虽然不影响使用，但是用户体验并不是最佳。而且我想改模板的css，一般是没有说明文档的。（2017年9月Openshift v2被关闭，虽然v3仍然可以建站，但是不想再折腾了，遂停用） 2017终于走向了程序员的世界，用github pages制作静态网页，也就是我的工作平台 (Lu’s Notebook)，和您看到的这个网站。这个网站的主题有详细的说明文档，便于我修改css，而且是极简风格，比较对我的胃口。 回顾我建站的历程，不难发现这是一个愚蠢的折腾过程，但是目前终于居有定所，倍感欣慰。 以下是我现在正在用的网站列表： Lu’s Notebook (工作，active) Lu’s Reality Marble (博客，active) 联系方式 E-mail: wangwanglulu@gmail.com Domain: wangwanglulu.com]]></content>
+      <categories>
+        <category>Special Pages</category>
+      </categories>
+      <tags>
+        <tag>初始网页</tag>
+      </tags>
+  </entry>
 </search>
